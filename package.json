@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "set NODE_OPTIONS=--openssl-legacy-provider set HTTPS=true && next dev -H 0.0.0.0",
     "build": "next build",
     "start": "next start -p 80",
     "lint:eslint": "eslint . --ext .ts,.tsx",
@@ -17,6 +17,7 @@
   "pre-commit": "lint:staged",
   "dependencies": {
     "@tensorflow/tfjs": "^2.6.0",
+    "@tensorflow/tfjs-node-gpu": "^4.22.0",
     "chart.js": "^2.9.3",
     "fili": "^2.0.3",
     "lodash": "^4.17.20",
@@ -29,8 +30,8 @@
     "sass": "1.26.10"
   },
   "devDependencies": {
-    "@types/react": "^16.9.53",
     "@types/chart.js": "^2.9.28",
+    "@types/react": "^16.9.53",
     "@typescript-eslint/eslint-plugin": "^4.5.0",
     "@typescript-eslint/parser": "^4.5.0",
     "eslint": "7.12.0",

@@ -172,15 +172,12 @@ const Home = () => {
       </Head>
       <Header />
       <div className={styles.homeContainer}>
-        <Contributor />
         <div className={styles.contentContainer}>
           <h3>
-            This is a demo for camera-based remote PPG (Pulse) sensing. The
-            recorded video will not be uploaded to cloud.
+            这是一个基于摄像头的远程脉搏波（RPPG）感应演示。
           </h3>
           <h4 style={{ color: 'red' }}>
-            Please place your face inside of the red box and keep stationary for
-            30 seconds
+            请将您的脸放入红色的框内，并保持30 秒。
           </h4>
           {!isRecording && (
             <button
@@ -188,7 +185,7 @@ const Home = () => {
               onClick={startRecording}
               type="button"
             >
-              Start the Demo
+              开始测试
             </button>
           )}
           <p className={styles.countdown}>{countDown}</p>
@@ -233,10 +230,6 @@ const Home = () => {
               }}
             />
           )}
-          <Research />
-          <a href="http://cs.washington.edu/" target="_blank">
-            <img src="/images/UWlogo5.png" alt="" width={500} height={70} />
-          </a>
         </div>
       </div>
     </>
